@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { emptyFunction } from './util'
 
 // as of 2020-07-12, this is only used in <GoogleMapsAutocomplete /> and
 // and <CheckoutPromoCodes /> and not exported for use outside of this library
@@ -40,7 +41,7 @@ const ButtonClearView = styled('button')`
   }
 `
 
-const ButtonClear = ({ ariaLabel, onClick, disabled, style }) => {
+const ButtonClear = ({ ariaLabel, onClick = emptyFunction, disabled, style }) => {
   const onUp = (evt) => {
     evt.preventDefault()
     evt.stopPropagation()

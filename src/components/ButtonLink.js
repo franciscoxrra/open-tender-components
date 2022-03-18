@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { emptyFunction } from './util'
 
 const ButtonLinkView = styled('button')`
   cursor: pointer;
@@ -32,7 +33,7 @@ const ButtonLink = ({
   label,
   children,
   disabled,
-  onClick,
+  onClick = emptyFunction,
   color = 'primary',
   style = null,
 }) => {

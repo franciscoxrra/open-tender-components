@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import propTypes from 'prop-types'
+import { emptyFunction } from './util'
 
 const ButtonPointsView = styled('button')`
   display: inline-block;
@@ -67,7 +68,7 @@ const ButtonPoints = ({
   icon,
   color = 'primary',
   size = 'small',
-  onClick = null,
+  onClick = emptyFunction,
   applied = false,
   style = null,
 }) => {

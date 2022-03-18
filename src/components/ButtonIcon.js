@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { emptyFunction } from './util'
 
 const ButtonIconView = styled('button')`
   cursor: pointer;
@@ -26,7 +27,7 @@ const ButtonIconView = styled('button')`
 
 const ButtonIcon = ({
   label,
-  onClick,
+  onClick = emptyFunction,
   color,
   size = 20,
   disabled,

@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { emptyFunction } from './util'
 
 export const ButtonStyledView = styled('button')`
   cursor: pointer;
@@ -68,8 +69,8 @@ const ButtonStyled = ({
   label,
   children,
   disabled,
-  onClick,
   icon,
+  onClick = emptyFunction,
   type = 'button',
   size = 'default',
   color = 'primary',
